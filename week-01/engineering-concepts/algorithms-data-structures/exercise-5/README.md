@@ -1,0 +1,14 @@
+## Exercise 5: Task Management System
+Scenario:
+You are developing a task management system where tasks need to be added, deleted, and traversed efficiently.
+## Steps:
+Understand Linked Lists:
+Explain the different types of linked lists (Singly Linked List, Doubly Linked List).
+Setup:
+Create a class Task with attributes like taskId, taskName, and status.
+Implementation:
+Implement a singly linked list to manage tasks.
+Implement methods to add, search, traverse, and delete tasks in the linked list.
+Analysis:
+Analyze the time complexity of each operation.
+Discuss the advantages of linked lists over arrays for dynamic data.

@@ -1,0 +1,16 @@
+## Exercise 1: Inventory Management System
+Scenario:
+You are developing an inventory management system for a warehouse. Efficient data storage and retrieval are crucial.
+## Steps:
+Understand the Problem:
+Explain why data structures and algorithms are essential in handling large inventories.
+Discuss the types of data structures suitable for this problem.
+Setup:
+Create a new project for the inventory management system.
+Implementation:
+Define a class Product with attributes like productId, productName, quantity, and price.
+Choose an appropriate data structure to store the products (e.g., ArrayList, HashMap).
+Implement methods to add, update, and delete products from the inventory.
+Analysis:
+Analyze the time complexity of each operation (add, update, delete) in your chosen data structure.
+Discuss how you can optimize these operations.
