@@ -14,7 +14,19 @@
  * Explain how to optimize the recursive solution to avoid excessive computation.
  */
 public class Main {
+    static int baseValue = 1000;
+    static double growthRate = 0.05;
+
+    public static double predictFutureValue(int years) {
+        if (years == 0) {
+            return baseValue;
+        }
+        return predictFutureValue(years - 1) * (1 + growthRate);
+    }
+
     public static void main(String[] args) {
         // TODO: Implement Financial Forecasting
+        System.out.println(predictFutureValue(5));
+        System.out.println(predictFutureValue(10));
     }
 }
