@@ -30,3 +30,8 @@ public class Main {
         System.out.println(predictFutureValue(10));
     }
 }
+
+
+
+
+
