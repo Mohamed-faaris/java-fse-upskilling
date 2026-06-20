@@ -3,6 +3,7 @@ import './App.css'
 import { Comp0 } from './Comp0'
 import { Comp1 } from './Comp1'
 import { Comp2 } from './Comp2'
+import { ScoreCard } from './ScoreCard'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
   <Comp0 />
   <Comp1 />
   <Comp2 />
+  <ScoreCard name="faaris" score={80} maxScore={100} />
     </>
   )
 }
