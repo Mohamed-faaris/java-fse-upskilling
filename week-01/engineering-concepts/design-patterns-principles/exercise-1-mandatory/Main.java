@@ -16,8 +16,48 @@
  * Create a test class to verify that only one instance of Logger is created and used across the
  * application.
  */
-public class Main {
-    public static void main(String[] args) {
-        // TODO: Implement Implementing the Singleton Pattern
+class Logger {
+    enum LogLevel {
+        INFO,
+        DEBUG,
+        ERROR;
+    }
+
+    private static Logger instance;
+    private LogLevel logLevel = LogLevel.INFO;
+
+    private Logger() {}
+
+    public static Logger getInstance() {
+        if (instance == null) {
+            instance = new Logger();
+        }
+        return instance;
+    }
+
+    public LogLevel getLogLevel() {
+        return logLevel;
+    }
+
+    public void setLogLevel(LogLevel logLevel) {
+        this.logLevel = logLevel;
+    }
+
+    public void log(String message, LogLevel level) {
+        if (level.ordinal() >= logLevel.ordinal()) {
+            System.out.println("[" + level + "] " + message);
+        }
     }
 }
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Logger logger1 = Logger.getInstance();
+        Logger logger2 = Logger.getInstance();
+        System.out.println(logger1 == logger2);
+    }
+}
+
+// ❯ javac Main.java && java Main
+// true

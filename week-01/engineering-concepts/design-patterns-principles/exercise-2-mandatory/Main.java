@@ -20,8 +20,75 @@
  * Create a test class to demonstrate the creation of different document types using the factory
  * method.
  */
-public class Main {
-    public static void main(String[] args) {
-        // TODO: Implement Implementing the Factory Method Pattern
+
+interface Document {
+    void open();
+}
+
+class WordDocument implements Document {
+    @Override
+    public void open() {
+        System.out.println("Opening Word Document");
     }
 }
+
+class PdfDocument implements Document {
+    @Override
+    public void open() {
+        System.out.println("Opening PDF Document");
+    }
+}
+
+class ExcelDocument implements Document {
+    @Override
+    public void open() {
+        System.out.println("Opening Excel Document");
+    }
+}
+
+abstract class DocumentFactory {
+    public abstract Document createDocument();
+}
+
+class WordFactory extends DocumentFactory {
+    @Override
+    public Document createDocument() {
+        return new WordDocument();
+    }
+}
+
+class PdfFactory extends DocumentFactory {
+    @Override
+    public Document createDocument() {
+        return new PdfDocument();
+    }
+}
+
+class ExcelFactory extends DocumentFactory {
+    @Override
+    public Document createDocument() {
+        return new ExcelDocument();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        DocumentFactory wordFactory = new WordFactory();
+        DocumentFactory pdfFactory = new PdfFactory();
+        DocumentFactory excelFactory = new ExcelFactory();
+
+        Document word = wordFactory.createDocument();
+        Document pdf = pdfFactory.createDocument();
+        Document excel = excelFactory.createDocument();
+
+        word.open();
+        pdf.open();
+        excel.open();
+    }
+}
+
+// ❯ javac Main.java && java Main
+// Opening Word Document
+// Opening PDF Document
+// Opening Excel Document
