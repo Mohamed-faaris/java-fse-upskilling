@@ -1,4 +1,7 @@
 # React Hol 04
+<img width="1919" height="835" alt="image" src="https://github.com/user-attachments/assets/c4583d13-cedd-4755-9682-2d42af8fef0e" />
+<img width="1827" height="1008" alt="image" src="https://github.com/user-attachments/assets/a7ec3720-3737-4d17-b227-4bbb0ae10dfd" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7f860669-d4bc-42b2-8c37-aa6bee50599e" />
 
 ## Objectives
 Explain the need and Benefits of component life cycle
