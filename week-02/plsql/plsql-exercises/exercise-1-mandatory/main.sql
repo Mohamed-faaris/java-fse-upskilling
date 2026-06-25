@@ -13,8 +13,29 @@
  * Question: Write a PL/SQL block that fetches all loans due in the next 30 days and prints a reminder
  * message for each customer.
  */
-public class Main {
-    public static void main(String[] args) {
-        // TODO: Implement Control Structures
-    }
-}
+BEGIN
+    FOR
+     rec IN (SELECT * FROM customers)   
+    LOOP
+        //senario 1
+        IF rec.age > 60 THEN
+            UPDATE customers SET loan_interest_rate = loan_interest_rate - 1 WHERE customer_id = rec.customer_id;
+        END IF;
+
+        //senario 2
+        IF rec.balance > 10000 THEN
+            UPDATE customers SET is_vip = TRUE WHERE customer_id = rec.customer_id;
+        END IF;
+
+
+    END LOOP;
+END;
+
+//senario 3
+
+BEGIN
+    FOR rec IN (SELECT * FROM loans WHERE due_date BETWEEN SYSDATE AND SYSDATE + 30)   
+    LOOP
+        DBMS_OUTPUT.PUT_LINE('Reminder: Loan for customer ' || rec.customer_id || ' is due on ' || rec.due_date);
+    END LOOP;
+END;
