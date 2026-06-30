@@ -1,4 +1,6 @@
 # Spring Core Maven Exercises
+upto ex5
+<img width="1913" height="993" alt="image" src="https://github.com/user-attachments/assets/03d90a50-fa2a-42a6-80af-5e48d2f1f133" />
 
 ## Exercise 1: Configuring a Basic Spring Application
 Scenario:
