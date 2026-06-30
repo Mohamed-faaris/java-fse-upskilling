@@ -3,28 +3,22 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
            http://www.springframework.org/schema/beans
            https://www.springframework.org/schema/beans/spring-beans.xsd
            http://www.springframework.org/schema/aop
-           https://www.springframework.org/schema/aop/spring-aop.xsd">
+           https://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Enable Spring AOP -->
     <aop:aspectj-autoproxy/>
 
-    <!-- Repository Bean -->
-    <bean id="bookRepository"
-          class="org.library.repository.BookRepository"/>
+    <!-- Component Scan: discovers @Service, @Repository, @Component, etc. -->
+    <context:component-scan base-package="org.library"/>
 
-    <!-- Service Bean -->
-    <bean id="bookService"
-          class="org.library.service.BookService">
-
-        <constructor-arg ref="bookRepository"/>
-
-    </bean>
-
-    <!-- Aspect Bean -->
+    <!-- Aspect Bean (no annotation on LoggingAspect yet) -->
     <bean id="loggingAspect"
           class="org.library.aspect.LoggingAspect"/>
 

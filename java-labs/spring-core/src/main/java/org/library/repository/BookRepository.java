@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.library.model.BookModel;
+import org.springframework.stereotype.Repository;
 
-/**
- * BookRepository
- */
+@Repository
 public class BookRepository {
     private List<BookModel> books = new ArrayList<>();
     
