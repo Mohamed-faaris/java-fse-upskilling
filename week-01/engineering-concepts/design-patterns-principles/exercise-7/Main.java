@@ -17,8 +17,72 @@
  * Test the Observer Implementation:
  * Create a test class to demonstrate the registration and notification of observers.
  */
+class StockMarket {
+    private List<Observer> observers = new ArrayList<>();
+    private String stockName;
+    private double stockPrice;
+
+    public StockMarket(String stockName) {
+        this.stockName = stockName;
+    }
+
+    public void registerObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update(stockName, stockPrice);
+        }
+    }
+
+    public void setStockPrice(double stockPrice) {
+        this.stockPrice = stockPrice;
+        notifyObservers();
+    }
+}
+
+interface Observer {
+    void update(String stockName, double stockPrice);
+}
+
+class MobileApp implements Observer {
+    private String appName;
+
+    public MobileApp(String appName) {
+        this.appName = appName;
+    }
+
+    public void update(String stockName, double stockPrice) {
+        System.out.println(appName + " - Stock: " + stockName + ", Price: $" + stockPrice);
+    }
+}
+
+class WebApp implements Observer {
+    private String appName;
+
+    public WebApp(String appName) {
+        this.appName = appName;
+    }
+
+    public void update(String stockName, double stockPrice) {
+        System.out.println(appName + " - Stock: " + stockName + ", Price: $" + stockPrice);
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         // TODO: Implement Implementing the Observer Pattern
+        StockMarket stockMarket = new StockMarket("AAPL");
+        MobileApp mobileApp = new MobileApp("Mobile App");
+        WebApp webApp = new WebApp("Web App");
+        stockMarket.registerObserver(mobileApp);
+        stockMarket.registerObserver(webApp);
+        stockMarket.setStockPrice(150.0);
+        stockMarket.setStockPrice(155.0);
     }
 }
