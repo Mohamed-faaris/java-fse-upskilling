@@ -3,6 +3,11 @@ upto ex8
 code : [spring-core](/java-labs/spring-core/)
 <img width="1913" height="993" alt="image" src="https://github.com/user-attachments/assets/03d90a50-fa2a-42a6-80af-5e48d2f1f133" />
 
+ex 9
+code : [spring-boot] (java-labs/LibraryManagement)
+<img width="1092" height="903" alt="image" src="https://github.com/user-attachments/assets/74224d52-be55-400a-a828-ef44561a2670" />
+
+
 ## Exercise 1: Configuring a Basic Spring Application
 Scenario:
 Your company is developing a web application for managing a library. You need to use the Spring Framework to handle the backend operations.
