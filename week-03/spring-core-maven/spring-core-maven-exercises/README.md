@@ -6,6 +6,7 @@ code : [spring-core](/java-labs/spring-core/)
 ex 9
 code : [spring-boot] (java-labs/LibraryManagement)
 <img width="1092" height="903" alt="image" src="https://github.com/user-attachments/assets/74224d52-be55-400a-a828-ef44561a2670" />
+<img width="1920" height="1079" alt="image" src="https://github.com/user-attachments/assets/b1a7909e-5c41-4667-ba70-2cdb4573b8ef" />
 
 
 ## Exercise 1: Configuring a Basic Spring Application
