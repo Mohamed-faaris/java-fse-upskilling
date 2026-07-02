@@ -131,7 +131,7 @@ insert into country (co_code, co_name) values ('JO', 'Jordan');
 insert into country (co_code, co_name) values ('KZ', 'Kazakhstan');
 insert into country (co_code, co_name) values ('KE', 'Kenya');
 insert into country (co_code, co_name) values ('KI', 'Kiribati');
-insert into country (co_code, co_name) values ('KP', 'Democratic People's Republic of Korea');
+insert into country (co_code, co_name) values ('KP', 'Democratic People''s Republic of Korea');
 insert into country (co_code, co_name) values ('KR', 'Republic of Korea');
 insert into country (co_code, co_name) values ('KW', 'Kuwait');
 insert into country (co_code, co_name) values ('KG', 'Kyrgyzstan');
