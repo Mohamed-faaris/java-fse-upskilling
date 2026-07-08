@@ -51,7 +51,7 @@
  * > Host: localhost:8090
  * > Authorization: Basic dXNlcjpkMjczMjFhOS0wNzUxLTRmNTktOGZjNi1mODYzMzg0N2E5Yjg=
  * > User-Agent: curl/7.55.0
- * > Accept: */*
+ * > Accept: * /*
  * >
  * < HTTP/1.1 200
  * < Set-Cookie: JSESSIONID=C0C907417A21BBCA9F30BEEA4B512AEE; Path=/; HttpOnly
