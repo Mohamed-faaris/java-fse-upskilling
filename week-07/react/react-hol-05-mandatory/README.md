@@ -1,5 +1,6 @@
 # React Hol 05
-
+![alt text](image.png)
+![alt text](image-1.png)
 ## Objectives
 Understanding the need for styling react component
 Working with CSS Module and inline styles
